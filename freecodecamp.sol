@@ -12,7 +12,6 @@ contract SimpleStorage{
     People[] public people;
     mapping(string => uint256) public nameToFavoriteNumber;
 
-    People public person =  People({favoriteNumber: 2, name:"Alex"});
     function store(uint256 _favoriteNubmer) public {
         favoriteNumber = _favoriteNubmer;
     }
@@ -22,7 +21,7 @@ contract SimpleStorage{
     // view --> read some state of the blockchain
     
     function retrieve() public view returns(uint256) {
-        return person.favoriteNumber;
+        return favoriteNumber;
     }
     // solidity에서 정보를 저장하는 두 가지 방법이 있는데, memory 와 storage임
     // memory --> only be stored during execution of the function | contract call
