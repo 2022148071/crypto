@@ -16,7 +16,7 @@ contract FundMe {
     }
 
     function getVersion() public view returns (uint256){
-        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306); // ETH/USD
+        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306); // ETH/USD on Sepolia testnet
         return priceFeed.version();
     }
 
@@ -32,4 +32,5 @@ contract FundMe {
         return uint256(answer);
         //4,663.03720859 * 10**8
     }
+
 }
